@@ -1,1 +1,1 @@
-export { default } from './TagWarning';
+export { default } from "./TagWarning";

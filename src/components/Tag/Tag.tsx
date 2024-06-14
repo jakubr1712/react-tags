@@ -1,5 +1,5 @@
-import React from 'react';
-import { TagWrapper, RemoveButton } from './Tag.styled';
+import React from "react";
+import { TagWrapper, RemoveButton } from "./Tag.styled";
 
 interface TagProps {
   id: number;

@@ -1,21 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-position: relative ;
+  position: relative;
 `;
 
 export const H3 = styled.h3`
   font-weight: bold;
-  color:#000;
+  color: #000;
 `;
 export const Count = styled.span`
-    right: 20px;
-    position: absolute;
-font-weight: 300;
-
+  right: 20px;
+  position: absolute;
+  font-weight: 300;
 `;
 export const Name = styled.span`
-margin-left: 10px;
+  margin-left: 10px;
 `;
 export const CenteredContainer = styled.div`
   display: flex;
@@ -45,7 +44,7 @@ export const Input = styled.input`
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 5px;
-  border: none ;
+  border: none;
 
   &:focus {
     outline: none;
@@ -74,7 +73,7 @@ export const TagList = styled.ul`
 
 export const TagItem = styled.label`
   display: flex;
-  width: 100% ;
+  width: 100%;
   /* justify-content: space-between; */
   align-items: center;
   padding: 8px;
@@ -95,15 +94,15 @@ export const CloseButton = styled.button`
 `;
 
 export const SaveButton = styled.button<{ disabled?: boolean }>`
-  background: ${({ disabled }) => (disabled ? '#eee' : '#1E5EF1')};
-  color: ${({ disabled }) => (disabled ? '#000' : '#fff')};
+  background: ${({ disabled }) => (disabled ? "#eee" : "#1E5EF1")};
+  color: ${({ disabled }) => (disabled ? "#000" : "#fff")};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   border: none;
   padding: 8px 16px;
   margin-top: 16px;
   width: 100%;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  border-radius: 10px ;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  border-radius: 10px;
 `;
 
 export const SearchIcon = styled.span`

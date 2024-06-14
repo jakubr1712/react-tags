@@ -5,7 +5,7 @@ import HomePage from "pages/Home";
 import { AppProvider } from "contexts/globalContext";
 
 const Test = () => {
-  return <div>App</div>;
+  return <div>Test</div>;
 };
 
 function App() {

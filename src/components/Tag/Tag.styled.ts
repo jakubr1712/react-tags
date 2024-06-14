@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TagWrapper = styled.div`
   border: 1px solid #e0e0e0;
@@ -15,7 +15,7 @@ export const RemoveButton = styled.button`
   border: none;
   margin-left: 8px;
   cursor: pointer;
-   color: #999;
-   font-size: 24px;
-   font-weight: 100;
+  color: #999;
+  font-size: 24px;
+  font-weight: 100;
 `;
