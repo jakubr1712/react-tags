@@ -1,0 +1,14 @@
+import React from 'react';
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { I{{properCase name}}ComponentProps } from "../models.d";
+import {{properCase name}} from '../{{properCase name}}';
+
+
+describe('{{properCase name}} component', () => {
+  it('renders properly', () => {
+    const { container }= render(<{{pascalCase name}} />);
+
+    expect(container).toMatchSnapshot();
+  })
+});
