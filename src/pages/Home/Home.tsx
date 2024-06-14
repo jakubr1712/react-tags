@@ -10,7 +10,7 @@ const availableTags = [
   { id: 5, name: 'Przeboje lat 70', count: 26, isActive: false },
   { id: 6, name: 'Ikonka popkultury', count: 25, isActive: false },
   { id: 7, name: 'Polska muzyka', count: 17, isActive: false },
-  { id: 8, name: 'Kabaret', count: 12, isActive: false },
+  { id: 8, name: 'Kabaret', count: 12, isActive: true },
 ];
 const Home: FC = () => (
   <div>
