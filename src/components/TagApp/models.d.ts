@@ -1,3 +1,3 @@
-export interface ITagInputProps {
+export interface ITagAppProps {
   availableTags: CommonTypes.ITag[];
 }

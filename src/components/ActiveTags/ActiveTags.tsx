@@ -4,7 +4,7 @@ import Tag from "../Tag/Tag";
 import { IActiveTagsProps } from "./models.d";
 
 const ActiveTags: React.FC<IActiveTagsProps> = ({ tags, removeTag }) => {
-  const renderTags = tags
+  const tagsAll = tags
     .filter((tag) => tag.isActive)
     .map((tag) => (
       <Tag
@@ -15,7 +15,7 @@ const ActiveTags: React.FC<IActiveTagsProps> = ({ tags, removeTag }) => {
       />
     ));
 
-  return <div className="active-tags">{renderTags}</div>;
+  return <div className="active-tags">{tagsAll}</div>;
 };
 
 export default ActiveTags;

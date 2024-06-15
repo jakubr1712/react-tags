@@ -13,9 +13,7 @@ module.exports = {
       components: path.resolve(__dirname, "..", "src/components/"),
       assets: path.resolve(__dirname, "..", "src/assets/"),
       constans: path.resolve(__dirname, "..", "src/constans/"),
-      contexts: path.resolve(__dirname, "..", "src/contexts/"),
       hooks: path.resolve(__dirname, "..", "src/hooks/"),
-      reducers: path.resolve(__dirname, "..", "src/reducers/"),
       utils: path.resolve(__dirname, "..", "src/utils/"),
     },
   },
@@ -33,11 +31,8 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader",
         ],
       },

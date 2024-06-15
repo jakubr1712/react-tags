@@ -3,9 +3,7 @@ import "./TagList.scss";
 import { ITagListProps } from "./models.d";
 
 const TagList: React.FC<ITagListProps> = ({ tags, filterText, toggleTag }) => {
-  return (
-    <ul className="tag-list">
-      {tags
+  const tagLists=tags
         .filter((tag) =>
           tag.name.toLowerCase().includes(filterText.toLowerCase())
         )
@@ -27,7 +25,10 @@ const TagList: React.FC<ITagListProps> = ({ tags, filterText, toggleTag }) => {
               <span className="tag-list__count">+{tag.count}</span>
             </div>
           </label>
-        ))}
+        ))
+  return (
+    <ul className="tag-list">
+      {tagLists}
     </ul>
   );
 };

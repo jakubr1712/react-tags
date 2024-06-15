@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import TagInput from "../TagInput";
+import TagApp from "../TagApp";
 
 const availableTags = [
   { id: 1, name: "Maryla Rodowicz", count: 40, isActive: false },
@@ -20,7 +20,7 @@ const availableTags = [
 
 test("activates and deactivates save button based on tag selection", () => {
   const { getByText, getByPlaceholderText, getByLabelText } = render(
-    <TagInput availableTags={availableTags} />
+    <TagApp availableTags={availableTags} />
   );
 
   const input = getByPlaceholderText("Szukaj tagów");
@@ -38,7 +38,7 @@ test("activates and deactivates save button based on tag selection", () => {
 
 test("creates tags on save button click", () => {
   const { getByText, getByLabelText } = render(
-    <TagInput availableTags={availableTags} />
+    <TagApp availableTags={availableTags} />
   );
 
   const checkbox = getByLabelText("Maryla Rodowicz");
@@ -52,7 +52,7 @@ test("creates tags on save button click", () => {
 
 test("removes tags on tag remove button click", () => {
   const { getByText, getByLabelText } = render(
-    <TagInput availableTags={availableTags} />
+    <TagApp availableTags={availableTags} />
   );
 
   const checkbox = getByLabelText("Maryla Rodowicz");

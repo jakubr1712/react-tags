@@ -1,13 +1,13 @@
 import React from "react";
-import "./TagInput.scss";
+import "./TagApp.scss";
 import InputField from "../InputField";
 import TagList from "../TagList";
 import ActiveTags from "../ActiveTags";
 import TagWarning from "../TagWarning";
 import { useTags } from "hooks/useTags";
-import { ITagInputProps } from "./models.d";
+import { ITagAppProps } from "./models";
 
-const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
+const TagApp: React.FC<ITagAppProps> = ({ availableTags }) => {
   const {
     tags,
     input,
@@ -64,4 +64,4 @@ const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
   );
 };
 
-export default TagInput;
+export default TagApp;
