@@ -1,1 +1,3 @@
-export interface ITagWarningComponentProps {}
+export interface ITagWarningProps {
+  currentTags: number;
+}

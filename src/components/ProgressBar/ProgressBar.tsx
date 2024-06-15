@@ -1,12 +1,9 @@
 import React from "react";
 import './ProgressBar.scss';
+import {IProgressBarProps} from './models.d';
 
-interface ProgressBarProps {
-  progress: number;
-  color: string;
-}
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ progress, color }) => {
+const ProgressBar: React.FC<IProgressBarProps> = ({ progress, color }) => {
   return (
     <div className="progress-bar__container">
       <div

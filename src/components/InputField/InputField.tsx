@@ -1,15 +1,9 @@
 import React from 'react';
 import './InputField.scss';
+import {IInputFieldProps} from './models.d';
 
-interface InputFieldProps {
-  input: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-  onClear: () => void;
-  onFocus: () => void;
-}
 
-const InputField: React.FC<InputFieldProps> = ({ input, onChange, onKeyDown, onClear, onFocus }) => {
+const InputField: React.FC<IInputFieldProps> = ({ input, onChange, onKeyDown, onClear, onFocus }) => {
   return (
     <div className="input-field">
       <span className="input-field__search-icon">

@@ -1,14 +1,11 @@
 import React from "react";
-import './TagWarning.scss';
 import ProgressBar from "../ProgressBar";
 import WarningText from "../WarningText";
 import { useTagProgress } from "hooks/useTagProgress";
+import {ITagWarningProps} from './models.d';
+import './TagWarning.scss';
 
-interface TagWarningProps {
-  currentTags: number;
-}
-
-const TagWarning: React.FC<TagWarningProps> = ({ currentTags }) => {
+const TagWarning: React.FC<ITagWarningProps> = ({ currentTags }) => {
   const { progress, color, text, message } = useTagProgress(currentTags);
 
   return (

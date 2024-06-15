@@ -1,20 +1,8 @@
 import React from 'react';
 import './TagList.scss';
+import {ITagListProps} from './models.d';
 
-interface ITag {
-  id: number;
-  name: string;
-  count: number;
-  isActive: boolean;
-}
-
-interface TagListProps {
-  tags: ITag[];
-  filterText: string;
-  toggleTag: (tag: ITag) => void;
-}
-
-const TagList: React.FC<TagListProps> = ({ tags, filterText, toggleTag }) => {
+const TagList: React.FC<ITagListProps> = ({ tags, filterText, toggleTag }) => {
   return (
     <ul className="tag-list">
       {tags

@@ -1,1 +1,4 @@
-export interface IWarningTextComponentProps {}
+export interface IWarningTextProps {
+  message: string;
+  color: string;
+}

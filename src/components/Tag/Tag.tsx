@@ -1,13 +1,9 @@
 import React from "react";
 import './Tag.scss';
+import {ITagProps} from './models.d';
 
-interface TagProps {
-  id: number;
-  name: string;
-  onRemove: (id: number) => void;
-}
 
-const Tag: React.FC<TagProps> = ({ id, name, onRemove }) => (
+const Tag: React.FC<ITagProps> = ({ id, name, onRemove }) => (
   <div className="tag">
     {name}
     <button className="tag__remove-button" onClick={() => onRemove(id)}>&times;</button>

@@ -5,19 +5,10 @@ import TagList from '../TagList';
 import ActiveTags from '../ActiveTags';
 import TagWarning from '../TagWarning';
 import { useTags } from 'hooks/useTags';
+import {ITagInputProps} from './models.d';
 
-interface ITag {
-  id: number;
-  name: string;
-  count: number;
-  isActive: boolean;
-}
 
-interface TagInputProps {
-  availableTags: ITag[];
-}
-
-const TagInput: React.FC<TagInputProps> = ({ availableTags }) => {
+const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
   const {
     tags,
     input,

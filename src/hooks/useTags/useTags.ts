@@ -1,18 +1,12 @@
 import { useState } from 'react';
 
-interface ITag {
-  id: number;
-  name: string;
-  count: number;
-  isActive: boolean;
-}
 
-export const useTags = (initialTags: ITag[]) => {
-  const [tags, setTags] = useState<ITag[]>(initialTags);
+export const useTags = (initialTags: CommonTypes.ITag[]) => {
+  const [tags, setTags] = useState<CommonTypes.ITag[]>(initialTags);
   const [input, setInput] = useState('');
   const [isFocusInput, setIsFocusInput] = useState(false);
 
-  const toggleTag = (tagToToggle: ITag) => {
+  const toggleTag = (tagToToggle: CommonTypes.ITag) => {
     setTags(
       tags.map((tag) =>
         tag.id === tagToToggle.id ? { ...tag, isActive: !tag.isActive } : tag

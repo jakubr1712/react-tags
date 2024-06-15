@@ -1,12 +1,9 @@
 import React from "react";
 import './WarningText.scss';
+import {IWarningTextProps} from './models.d';
 
-interface WarningTextProps {
-  message: string;
-  color: string;
-}
 
-const WarningText: React.FC<WarningTextProps> = ({ message, color }) => {
+const WarningText: React.FC<IWarningTextProps> = ({ message, color }) => {
   return (
     <div className="warning-text" style={{ color }}>
       <span className="warning-text__icon">ℹ️</span>
