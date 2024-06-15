@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "..", "./src/index.tsx"),
@@ -11,7 +10,6 @@ module.exports = {
       styles: path.resolve(__dirname, "..", "src/styles/"),
       pages: path.resolve(__dirname, "..", "src/pages/"),
       components: path.resolve(__dirname, "..", "src/components/"),
-      assets: path.resolve(__dirname, "..", "src/assets/"),
       constans: path.resolve(__dirname, "..", "src/constans/"),
       hooks: path.resolve(__dirname, "..", "src/hooks/"),
       utils: path.resolve(__dirname, "..", "src/utils/"),
@@ -67,11 +65,6 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       process: "process/browser",
-    }),
-    new Dotenv(),
-    new webpack.EnvironmentPlugin({
-      REACT_APP_API_URL: "",
-      REACT_APP_API_KEY_AUTHORIZATION: "",
     }),
   ],
   stats: "errors-only",
