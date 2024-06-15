@@ -10,11 +10,13 @@ const TagWarning: React.FC<ITagWarningProps> = ({ currentTags }) => {
 
   return (
     <div className="tag-warning__container">
-      <div className="tag-warning__header" style={{ color }}>
+      <div className="tag-warning__header" >
+        <span style={{ color }}>
         {text}
+        </span>
         <ProgressBar progress={progress} color={color} />
       </div>
-      <WarningText message={message} color={color} />
+      <WarningText message={message} />
     </div>
   );
 };

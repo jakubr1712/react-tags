@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export const useTags = (initialTags: CommonTypes.ITag[]) => {
   const [tags, setTags] = useState<CommonTypes.ITag[]>(initialTags);
+  const [activeTags, setActiveTags] = useState<CommonTypes.ITag[]>(initialTags.filter((tag) => tag.isActive));
+
   const [input, setInput] = useState("");
   const [isFocusInput, setIsFocusInput] = useState(false);
 
@@ -27,6 +29,7 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
   };
 
   const handleSave = () => {
+    setActiveTags(tags.filter((tag) => tag.isActive));
     setIsFocusInput(false);
   };
 
@@ -36,14 +39,13 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
   };
 
   const removeTag = (tagId: number) => {
-    setTags(
-      tags.map((tag) =>
-        tag.id === tagId ? { ...tag, isActive: !tag.isActive } : tag
-      )
+    setActiveTags(
+activeTags.filter((tag) => tag.id !== tagId )
     );
   };
 
   return {
+    activeTags,
     tags,
     input,
     isFocusInput,

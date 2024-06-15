@@ -7,11 +7,11 @@ const TagList: React.FC<ITagListProps> = ({ tags, filterText, toggleTag }) => {
         .filter((tag) =>
           tag.name.toLowerCase().includes(filterText.toLowerCase())
         )
-        .map((tag) => (
+        .map((tag,index) => (
           <label
             key={tag.id}
             htmlFor={"tag-" + tag.id}
-            className="tag-list__item"
+             className={`tag-list__item ${index === 0 ? 'tag-list__item--highlighted' : ''}`}
           >
             <input
               id={"tag-" + tag.id}

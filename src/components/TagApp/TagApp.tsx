@@ -10,6 +10,7 @@ import { ITagAppProps } from "./models";
 const TagApp: React.FC<ITagAppProps> = ({ data }) => {
   const {
     tags,
+    activeTags,
     input,
     isFocusInput,
     setIsFocusInput,
@@ -52,10 +53,10 @@ const TagApp: React.FC<ITagAppProps> = ({ data }) => {
           </>
         ) : (
           <>
-            <ActiveTags tags={tags} removeTag={removeTag} />
+            <ActiveTags tags={activeTags} removeTag={removeTag} />
             <hr className="tag-input__horizontal-line" />
             <TagWarning
-              currentTags={tags.filter((tag) => tag.isActive).length}
+              currentTags={activeTags.length}
             />
           </>
         )}

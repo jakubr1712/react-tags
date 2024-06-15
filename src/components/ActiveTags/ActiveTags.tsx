@@ -5,7 +5,6 @@ import { IActiveTagsProps } from "./models.d";
 
 const ActiveTags: React.FC<IActiveTagsProps> = ({ tags, removeTag }) => {
   const tagsAll = tags
-    .filter((tag) => tag.isActive)
     .map((tag) => (
       <Tag
         key={tag.id}
