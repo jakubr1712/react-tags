@@ -1,4 +1,4 @@
-export const availableTags = [
+export const data = [
   { id: 1, name: "Maryla Rodowicz", count: 40, isActive: false },
   { id: 2, name: "Odmrażanie trupa", count: 35, isActive: false },
   { id: 3, name: "Festiwal w Opolu", count: 32, isActive: false },

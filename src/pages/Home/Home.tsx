@@ -1,9 +1,9 @@
 import { FC } from "react";
 import TagApp from "components/TagApp";
-import {availableTags} from "constans/data";
+import {data} from "constans/data";
 
 
 const Home: FC = () => (
-    <TagApp availableTags={availableTags} />
+    <TagApp data={data} />
 );
 export default Home;

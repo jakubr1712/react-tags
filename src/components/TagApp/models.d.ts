@@ -1,3 +1,3 @@
 export interface ITagAppProps {
-  availableTags: CommonTypes.ITag[];
+  data: CommonTypes.ITag[];
 }

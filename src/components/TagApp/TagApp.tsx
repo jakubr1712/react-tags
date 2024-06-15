@@ -7,7 +7,7 @@ import TagWarning from "../TagWarning";
 import { useTags } from "hooks/useTags";
 import { ITagAppProps } from "./models";
 
-const TagApp: React.FC<ITagAppProps> = ({ availableTags }) => {
+const TagApp: React.FC<ITagAppProps> = ({ data }) => {
   const {
     tags,
     input,
@@ -19,7 +19,7 @@ const TagApp: React.FC<ITagAppProps> = ({ availableTags }) => {
     handleSave,
     handleClearInput,
     removeTag,
-  } = useTags(availableTags);
+  } = useTags(data);
 
   const hasActiveTags = tags.some((tag) => tag.isActive);
 

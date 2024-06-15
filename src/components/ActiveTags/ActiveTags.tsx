@@ -1,6 +1,6 @@
 import React from "react";
 import "./ActiveTags.scss";
-import Tag from "../Tag/Tag";
+import Tag from "../Tag";
 import { IActiveTagsProps } from "./models.d";
 
 const ActiveTags: React.FC<IActiveTagsProps> = ({ tags, removeTag }) => {
