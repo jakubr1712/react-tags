@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagListItem component renders properly and matches snapshot 1`] = `
+<div>
+  <label
+    class="tag-list__item tag-list__item--highlighted"
+    for="tag-1"
+  >
+    <input
+      aria-label="Tag1"
+      id="tag-1"
+      type="checkbox"
+    />
+    <div>
+      <span
+        class="tag-list__name"
+      >
+        Tag1
+      </span>
+      <span
+        class="tag-list__count"
+      >
+        +
+        10
+      </span>
+    </div>
+  </label>
+</div>
+`;

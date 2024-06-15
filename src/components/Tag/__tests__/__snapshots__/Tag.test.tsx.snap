@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="tag"
+  >
+    Sample Tag
+    <button
+      class="tag__remove-button"
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;

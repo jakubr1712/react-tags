@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagApp component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="tag-input__container"
+  >
+    <div
+      class="tag-input__card"
+    >
+      <div
+        class="tag-input__header-container"
+      >
+        <h3
+          class="tag-input__header"
+        >
+          Tagi
+        </h3>
+      </div>
+      <div
+        class="input-field"
+      >
+        <span
+          class="input-field__search-icon"
+        >
+          <svg
+            data-testid="search-icon"
+            fill="black"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+          >
+            <path
+              d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8c1.64 0 3.16-.53 4.41-1.41L21.59 22 23 20.59l-7.18-7.18C17.47 13.16 18 11.64 18 10c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"
+            />
+          </svg>
+        </span>
+        <input
+          class="input-field__input"
+          placeholder="Wyszukaj grupę lub tag"
+          value=""
+        />
+        <span
+          class="input-field__clear-icon"
+        >
+          ×
+        </span>
+      </div>
+      <hr
+        class="tag-input__horizontal-line"
+      />
+      <div
+        class="active-tags"
+      >
+        <div
+          class="tag"
+        >
+          Tag2
+          <button
+            class="tag__remove-button"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+      <hr
+        class="tag-input__horizontal-line"
+      />
+      <div
+        class="tag-warning__container"
+      >
+        <div
+          class="tag-warning__header"
+        >
+          <span
+            style="color: rgb(244, 67, 54);"
+          >
+            Słabo
+          </span>
+          <div
+            class="progress-bar__container"
+          >
+            <div
+              class="progress-bar__item progress-bar__item--active"
+              role="progressbar-item--active"
+              style="background-color: rgb(244, 67, 54);"
+            />
+            <div
+              class="progress-bar__item "
+              role="progressbar-item"
+            />
+            <div
+              class="progress-bar__item "
+              role="progressbar-item"
+            />
+            <div
+              class="progress-bar__item "
+              role="progressbar-item"
+            />
+            <div
+              class="progress-bar__item "
+              role="progressbar-item"
+            />
+          </div>
+        </div>
+        <div
+          class="warning-text"
+        >
+          <span
+            class="warning-text__icon"
+          >
+            ℹ️
+          </span>
+          Zbyt mało tagów. Dodaj jeszcze 4 aby poprawić widoczność artykułu
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

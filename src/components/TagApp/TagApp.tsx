@@ -15,7 +15,6 @@ const TagApp: React.FC<ITagAppProps> = ({ data }) => {
     isFocusInput,
     setIsFocusInput,
     toggleTag,
-    handleKeyDown,
     handleChange,
     handleSave,
     handleClearInput,
@@ -33,7 +32,6 @@ const TagApp: React.FC<ITagAppProps> = ({ data }) => {
         <InputField
           input={input}
           onChange={handleChange}
-          onKeyDown={handleKeyDown}
           onClear={handleClearInput}
           onFocus={() => setIsFocusInput(true)}
         />
@@ -55,9 +53,7 @@ const TagApp: React.FC<ITagAppProps> = ({ data }) => {
           <>
             <ActiveTags tags={activeTags} removeTag={removeTag} />
             <hr className="tag-input__horizontal-line" />
-            <TagWarning
-              currentTags={activeTags.length}
-            />
+            <TagWarning currentTags={activeTags.length} />
           </>
         )}
       </div>

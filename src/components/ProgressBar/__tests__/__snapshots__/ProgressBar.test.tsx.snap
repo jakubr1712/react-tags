@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="progress-bar__container"
+  >
+    <div
+      class="progress-bar__item "
+      role="progressbar-item"
+    />
+    <div
+      class="progress-bar__item "
+      role="progressbar-item"
+    />
+    <div
+      class="progress-bar__item "
+      role="progressbar-item"
+    />
+    <div
+      class="progress-bar__item "
+      role="progressbar-item"
+    />
+    <div
+      class="progress-bar__item "
+      role="progressbar-item"
+    />
+  </div>
+</div>
+`;

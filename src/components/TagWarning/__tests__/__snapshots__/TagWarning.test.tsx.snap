@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagWarning component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="tag-warning__container"
+  >
+    <div
+      class="tag-warning__header"
+    >
+      <span
+        style="color: rgb(205, 220, 57);"
+      >
+        Słabo
+      </span>
+      <div
+        class="progress-bar__container"
+      >
+        <div
+          class="progress-bar__item progress-bar__item--active"
+          role="progressbar-item--active"
+          style="background-color: rgb(205, 220, 57);"
+        />
+        <div
+          class="progress-bar__item progress-bar__item--active"
+          role="progressbar-item--active"
+          style="background-color: rgb(205, 220, 57);"
+        />
+        <div
+          class="progress-bar__item progress-bar__item--active"
+          role="progressbar-item--active"
+          style="background-color: rgb(205, 220, 57);"
+        />
+        <div
+          class="progress-bar__item "
+          role="progressbar-item"
+        />
+        <div
+          class="progress-bar__item "
+          role="progressbar-item"
+        />
+      </div>
+    </div>
+    <div
+      class="warning-text"
+    >
+      <span
+        class="warning-text__icon"
+      >
+        ℹ️
+      </span>
+      Zbyt mało tagów. Dodaj jeszcze 2 aby poprawić widoczność artykułu
+    </div>
+  </div>
+</div>
+`;

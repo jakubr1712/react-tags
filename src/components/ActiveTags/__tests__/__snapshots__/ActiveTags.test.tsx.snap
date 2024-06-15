@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActiveTags component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="active-tags"
+  >
+    <div
+      class="tag"
+    >
+      Tag1
+      <button
+        class="tag__remove-button"
+      >
+        ×
+      </button>
+    </div>
+    <div
+      class="tag"
+    >
+      Tag2
+      <button
+        class="tag__remove-button"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+</div>
+`;

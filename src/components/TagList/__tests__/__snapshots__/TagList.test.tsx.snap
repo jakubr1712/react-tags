@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagList component renders properly and matches snapshot 1`] = `
+<div>
+  <ul
+    class="tag-list"
+  >
+    <li>
+      Tag1
+    </li>
+    <li>
+      Tag2
+    </li>
+    <li>
+      Tag3
+    </li>
+  </ul>
+</div>
+`;

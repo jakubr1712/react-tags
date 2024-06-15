@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WarningText component renders properly and matches snapshot 1`] = `
+<div>
+  <div
+    class="warning-text"
+  >
+    <span
+      class="warning-text__icon"
+    >
+      ℹ️
+    </span>
+    This is a warning message
+  </div>
+</div>
+`;

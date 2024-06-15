@@ -2,8 +2,9 @@ import { useState } from "react";
 
 export const useTags = (initialTags: CommonTypes.ITag[]) => {
   const [tags, setTags] = useState<CommonTypes.ITag[]>(initialTags);
-  const [activeTags, setActiveTags] = useState<CommonTypes.ITag[]>(initialTags.filter((tag) => tag.isActive));
-
+  const [activeTags, setActiveTags] = useState<CommonTypes.ITag[]>(
+    initialTags.filter((tag) => tag.isActive)
+  );
   const [input, setInput] = useState("");
   const [isFocusInput, setIsFocusInput] = useState(false);
 
@@ -13,15 +14,6 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
         tag.id === tagToToggle.id ? { ...tag, isActive: !tag.isActive } : tag
       )
     );
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && input) {
-      const tag = tags.find(
-        (tag) => tag.name.toLowerCase() === input.toLowerCase()
-      );
-      if (tag) toggleTag(tag);
-    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,9 +31,7 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
   };
 
   const removeTag = (tagId: number) => {
-    setActiveTags(
-activeTags.filter((tag) => tag.id !== tagId )
-    );
+    setActiveTags(activeTags.filter((tag) => tag.id !== tagId));
   };
 
   return {
@@ -51,7 +41,6 @@ activeTags.filter((tag) => tag.id !== tagId )
     isFocusInput,
     setIsFocusInput,
     toggleTag,
-    handleKeyDown,
     handleChange,
     handleSave,
     handleClearInput,
