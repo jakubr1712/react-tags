@@ -1,0 +1,10 @@
+.warning-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+
+  &__icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+}

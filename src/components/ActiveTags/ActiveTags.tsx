@@ -1,14 +1,13 @@
 import React from 'react';
-import { TagContainer } from '../TagInput/TagInput.styled';
+import './ActiveTags.scss';
 import Tag from '../Tag/Tag';
 
- interface ITag {
+interface ITag {
   id: number;
   name: string;
   count: number;
   isActive: boolean;
 }
-
 
 interface ActiveTagsProps {
   tags: ITag[];
@@ -17,13 +16,13 @@ interface ActiveTagsProps {
 
 const ActiveTags: React.FC<ActiveTagsProps> = ({ tags, removeTag }) => {
   return (
-    <TagContainer>
+    <div className="active-tags">
       {tags
         .filter((tag) => tag.isActive)
         .map((tag) => (
           <Tag key={tag.id} id={tag.id} name={tag.name} onRemove={() => removeTag(tag.id)} />
         ))}
-    </TagContainer>
+    </div>
   );
 };
 

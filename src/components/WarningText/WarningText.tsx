@@ -1,5 +1,5 @@
 import React from "react";
-import { WarningTextContainer, WarningIcon } from "./WarningText.styled";
+import './WarningText.scss';
 
 interface WarningTextProps {
   message: string;
@@ -8,10 +8,10 @@ interface WarningTextProps {
 
 const WarningText: React.FC<WarningTextProps> = ({ message, color }) => {
   return (
-    <WarningTextContainer style={{ color }}>
-      <WarningIcon>ℹ️</WarningIcon>
+    <div className="warning-text" style={{ color }}>
+      <span className="warning-text__icon">ℹ️</span>
       {message}
-    </WarningTextContainer>
+    </div>
   );
 };
 

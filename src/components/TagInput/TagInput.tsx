@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  CenteredContainer,
-  Card,
-  HorizontalLine,
-  HeaderContainer,
-  H3,
-  SaveButton,
-} from './TagInput.styled';
+import './TagInput.scss';
 import InputField from '../InputField';
 import TagList from '../TagList';
 import ActiveTags from '../ActiveTags';
@@ -19,6 +12,7 @@ interface ITag {
   count: number;
   isActive: boolean;
 }
+
 interface TagInputProps {
   availableTags: ITag[];
 }
@@ -40,11 +34,11 @@ const TagInput: React.FC<TagInputProps> = ({ availableTags }) => {
   const hasActiveTags = tags.some((tag) => tag.isActive);
 
   return (
-    <CenteredContainer>
-      <Card>
-        <HeaderContainer>
-          <H3>Tagi</H3>
-        </HeaderContainer>
+    <div className="tag-input__container">
+      <div className="tag-input__card">
+        <div className="tag-input__header-container">
+          <h3 className="tag-input__header">Tagi</h3>
+        </div>
         <InputField
           input={input}
           onChange={handleChange}
@@ -52,23 +46,27 @@ const TagInput: React.FC<TagInputProps> = ({ availableTags }) => {
           onClear={handleClearInput}
           onFocus={() => setIsFocusInput(true)}
         />
-        <HorizontalLine />
+        <hr className="tag-input__horizontal-line" />
         {isFocusInput ? (
           <>
             <TagList tags={tags} filterText={input} toggleTag={toggleTag} />
-            <SaveButton onClick={handleSave} disabled={!hasActiveTags}>
+            <button
+              className={`tag-input__save-button${!hasActiveTags ? ' tag-input__save-button--disabled' : ''}`}
+              onClick={handleSave}
+              disabled={!hasActiveTags}
+            >
               Zapisz
-            </SaveButton>
+            </button>
           </>
         ) : (
           <>
             <ActiveTags tags={tags} removeTag={removeTag} />
-            <HorizontalLine />
+            <hr className="tag-input__horizontal-line" />
             <TagWarning currentTags={tags.filter((tag) => tag.isActive).length} />
           </>
         )}
-      </Card>
-    </CenteredContainer>
+      </div>
+    </div>
   );
 };
 

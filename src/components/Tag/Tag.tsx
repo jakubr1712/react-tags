@@ -1,5 +1,5 @@
 import React from "react";
-import { TagWrapper, RemoveButton } from "./Tag.styled";
+import './Tag.scss';
 
 interface TagProps {
   id: number;
@@ -8,10 +8,10 @@ interface TagProps {
 }
 
 const Tag: React.FC<TagProps> = ({ id, name, onRemove }) => (
-  <TagWrapper>
+  <div className="tag">
     {name}
-    <RemoveButton onClick={() => onRemove(id)}>&times;</RemoveButton>
-  </TagWrapper>
+    <button className="tag__remove-button" onClick={() => onRemove(id)}>&times;</button>
+  </div>
 );
 
 export default Tag;
