@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getProgressColor} from "utils/getProgressColor";
+import { getProgressColor } from "utils/getProgressColor";
 import { getProgressText } from "utils/getProgressText";
 import { getWarningMessage } from "utils/getWarningMessage";
 

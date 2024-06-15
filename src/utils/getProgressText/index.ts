@@ -1,1 +1,1 @@
-export * from './getProgressText';
+export * from "./getProgressText";

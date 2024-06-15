@@ -1,1 +1,1 @@
-export { default } from './ActiveTags';
+export { default } from "./ActiveTags";

@@ -1,14 +1,20 @@
-import React from 'react';
-import './TagList.scss';
-import {ITagListProps} from './models.d';
+import React from "react";
+import "./TagList.scss";
+import { ITagListProps } from "./models.d";
 
 const TagList: React.FC<ITagListProps> = ({ tags, filterText, toggleTag }) => {
   return (
     <ul className="tag-list">
       {tags
-        .filter((tag) => tag.name.toLowerCase().includes(filterText.toLowerCase()))
+        .filter((tag) =>
+          tag.name.toLowerCase().includes(filterText.toLowerCase())
+        )
         .map((tag) => (
-          <label key={tag.id} htmlFor={"tag-" + tag.id} className="tag-list__item">
+          <label
+            key={tag.id}
+            htmlFor={"tag-" + tag.id}
+            className="tag-list__item"
+          >
             <input
               id={"tag-" + tag.id}
               type="checkbox"

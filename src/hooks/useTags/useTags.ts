@@ -1,9 +1,8 @@
-import { useState } from 'react';
-
+import { useState } from "react";
 
 export const useTags = (initialTags: CommonTypes.ITag[]) => {
   const [tags, setTags] = useState<CommonTypes.ITag[]>(initialTags);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [isFocusInput, setIsFocusInput] = useState(false);
 
   const toggleTag = (tagToToggle: CommonTypes.ITag) => {
@@ -15,8 +14,10 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && input) {
-      const tag = tags.find((tag) => tag.name.toLowerCase() === input.toLowerCase());
+    if (e.key === "Enter" && input) {
+      const tag = tags.find(
+        (tag) => tag.name.toLowerCase() === input.toLowerCase()
+      );
       if (tag) toggleTag(tag);
     }
   };
@@ -30,7 +31,7 @@ export const useTags = (initialTags: CommonTypes.ITag[]) => {
   };
 
   const handleClearInput = () => {
-    setInput('');
+    setInput("");
     setIsFocusInput(false);
   };
 

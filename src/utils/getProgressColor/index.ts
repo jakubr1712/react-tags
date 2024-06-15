@@ -1,1 +1,1 @@
-export * from './getProgressColor';
+export * from "./getProgressColor";

@@ -1,12 +1,11 @@
-import React from 'react';
-import './TagInput.scss';
-import InputField from '../InputField';
-import TagList from '../TagList';
-import ActiveTags from '../ActiveTags';
-import TagWarning from '../TagWarning';
-import { useTags } from 'hooks/useTags';
-import {ITagInputProps} from './models.d';
-
+import React from "react";
+import "./TagInput.scss";
+import InputField from "../InputField";
+import TagList from "../TagList";
+import ActiveTags from "../ActiveTags";
+import TagWarning from "../TagWarning";
+import { useTags } from "hooks/useTags";
+import { ITagInputProps } from "./models.d";
 
 const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
   const {
@@ -42,7 +41,9 @@ const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
           <>
             <TagList tags={tags} filterText={input} toggleTag={toggleTag} />
             <button
-              className={`tag-input__save-button${!hasActiveTags ? ' tag-input__save-button--disabled' : ''}`}
+              className={`tag-input__save-button${
+                !hasActiveTags ? " tag-input__save-button--disabled" : ""
+              }`}
               onClick={handleSave}
               disabled={!hasActiveTags}
             >
@@ -53,7 +54,9 @@ const TagInput: React.FC<ITagInputProps> = ({ availableTags }) => {
           <>
             <ActiveTags tags={tags} removeTag={removeTag} />
             <hr className="tag-input__horizontal-line" />
-            <TagWarning currentTags={tags.filter((tag) => tag.isActive).length} />
+            <TagWarning
+              currentTags={tags.filter((tag) => tag.isActive).length}
+            />
           </>
         )}
       </div>

@@ -1,1 +1,1 @@
-export { default } from './WarningText';
+export { default } from "./WarningText";

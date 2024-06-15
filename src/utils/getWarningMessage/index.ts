@@ -1,1 +1,1 @@
-export * from './getWarningMessage';
+export * from "./getWarningMessage";

@@ -1,7 +1,6 @@
 import React from "react";
-import './WarningText.scss';
-import {IWarningTextProps} from './models.d';
-
+import "./WarningText.scss";
+import { IWarningTextProps } from "./models.d";
 
 const WarningText: React.FC<IWarningTextProps> = ({ message, color }) => {
   return (

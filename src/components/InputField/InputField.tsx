@@ -1,9 +1,14 @@
-import React from 'react';
-import './InputField.scss';
-import {IInputFieldProps} from './models.d';
+import React from "react";
+import "./InputField.scss";
+import { IInputFieldProps } from "./models.d";
 
-
-const InputField: React.FC<IInputFieldProps> = ({ input, onChange, onKeyDown, onClear, onFocus }) => {
+const InputField: React.FC<IInputFieldProps> = ({
+  input,
+  onChange,
+  onKeyDown,
+  onClear,
+  onFocus,
+}) => {
   return (
     <div className="input-field">
       <span className="input-field__search-icon">
@@ -19,7 +24,9 @@ const InputField: React.FC<IInputFieldProps> = ({ input, onChange, onKeyDown, on
         placeholder="Wyszukaj grupę lub tag"
         onFocus={onFocus}
       />
-      <span className="input-field__clear-icon" onClick={onClear}>&times;</span>
+      <span className="input-field__clear-icon" onClick={onClear}>
+        &times;
+      </span>
     </div>
   );
 };
